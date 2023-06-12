@@ -30,4 +30,4 @@ jobs:
           context: .
           push: true
           tags: yashwarrdhan/golang:latest
-          dockerfile: .github/workflows/Dockerfile
+          file: Dockerfile
