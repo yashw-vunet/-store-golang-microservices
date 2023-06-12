@@ -7,7 +7,10 @@ RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o myapp .
+# Use the 'find' command to locate the Go file(s)
+RUN find . -type f -name '*.go' -exec echo {} \;
+
+RUN go build -o myapp .
 
 FROM alpine:3.14
 
