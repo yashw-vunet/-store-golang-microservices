@@ -27,9 +27,6 @@ jobs:
       - name: Build and push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
-            context: .  # The context for the build, assuming the Dockerfile is in the root of the repository
-            addLatest: true
-            push: true
             image: yashwarrdhan/golang
             tag: latest
             registry: docker.io
